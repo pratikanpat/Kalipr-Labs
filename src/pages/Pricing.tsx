@@ -121,7 +121,7 @@ const pricingTiers = [
 
 const Pricing = () => {
   useEffect(() => {
-    document.title = "Pricing — NEXUS";
+    document.title = "Pricing — Kalipr Labs";
   }, []);
   return (
     <PageTransition>

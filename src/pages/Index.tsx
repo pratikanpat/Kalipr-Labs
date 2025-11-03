@@ -16,7 +16,7 @@ const Index = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   useEffect(() => {
-    document.title = "Home — NEXUS";
+    document.title = "Home — Kalipr Labs";
   }, []);
 
   const services = [

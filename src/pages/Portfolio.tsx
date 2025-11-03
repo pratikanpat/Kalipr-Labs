@@ -65,7 +65,7 @@ const Portfolio = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    document.title = "Portfolio — NEXUS";
+    document.title = "Portfolio — Kalipr Labs";
   }, []);
 
   useEffect(() => {
