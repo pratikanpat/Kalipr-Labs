@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -32,33 +33,70 @@ const Navigation = () => {
             </span>
           </Link>
 
-          <div className="flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="relative group"
-              >
-                <span className={`text-sm font-medium transition-colors ${
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}>
-                  {item.label}
-                </span>
-                {location.pathname === item.path && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-glow"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
+          <div className="flex items-center gap-4">
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="relative group"
+                >
+                  <span className={`text-sm font-medium transition-colors ${
+                    location.pathname === item.path
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}>
+                    {item.label}
+                  </span>
+                  {location.pathname === item.path && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-glow"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile menu toggle */}
+            <MobileMenu navItems={navItems} locationPath={location.pathname} />
           </div>
         </div>
       </div>
     </motion.nav>
+  );
+};
+
+const MobileMenu = ({ navItems, locationPath }: { navItems: { path: string; label: string }[]; locationPath: string }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="md:hidden relative">
+      <button
+        aria-label="Toggle menu"
+        onClick={() => setOpen((s) => !s)}
+        className="p-2 glass rounded-md"
+      >
+        {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 bg-background/80 backdrop-blur-md glass rounded-md shadow-lg py-2 z-50">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setOpen(false)}
+              className={`block px-4 py-2 text-sm ${locationPath === item.path ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

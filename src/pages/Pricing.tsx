@@ -136,7 +136,7 @@ const Pricing = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-20"
           >
-            <h1 className="text-6xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-glow bg-clip-text text-transparent">Pricing</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

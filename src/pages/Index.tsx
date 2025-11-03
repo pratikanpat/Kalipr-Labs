@@ -81,11 +81,11 @@ const Index = () => {
                 </span>
               </motion.div>
 
-              <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-glow bg-clip-text text-transparent animate-glow-pulse">
                   Building the Future
                 </span>
-                <span className="block mt-2">
+                <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                   of Digital Experiences
                 </span>
               </h1>
@@ -108,7 +108,7 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="h-[500px] relative"
+              className="h-64 md:h-[420px] lg:h-[500px] relative"
             >
               <Scene3D />
             </motion.div>
