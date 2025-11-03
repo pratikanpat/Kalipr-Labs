@@ -65,6 +65,10 @@ const Portfolio = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    document.title = "Portfolio — NEXUS";
+  }, []);
+
+  useEffect(() => {
     cardsRef.current.forEach((card, index) => {
       if (!card) return;
 

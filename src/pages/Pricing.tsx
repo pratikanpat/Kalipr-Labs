@@ -6,6 +6,7 @@ import CursorEffect from "@/components/CursorEffect";
 import Footer from "@/components/Footer";
 import GlassButton from "@/components/GlassButton";
 import PageTransition from "@/components/PageTransition";
+import { useEffect } from "react";
 
 const pricingTiers = [
   {
@@ -119,6 +120,9 @@ const pricingTiers = [
 ];
 
 const Pricing = () => {
+  useEffect(() => {
+    document.title = "Pricing — NEXUS";
+  }, []);
   return (
     <PageTransition>
       <div className="min-h-screen bg-gradient-dark">

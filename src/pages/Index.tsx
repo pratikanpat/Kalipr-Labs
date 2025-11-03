@@ -8,11 +8,16 @@ import CursorEffect from "@/components/CursorEffect";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Index = () => {
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
+
+  useEffect(() => {
+    document.title = "Home — NEXUS";
+  }, []);
 
   const services = [
     {
