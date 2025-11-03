@@ -1,0 +1,4 @@
+/*    /index.html   200
+
+# This redirect tells Netlify to serve index.html for all routes (SPA fallback).
+# It prevents 404s or white pages when users navigate directly to a client-side route.
