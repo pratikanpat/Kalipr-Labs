@@ -162,17 +162,17 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="glass p-16 rounded-3xl border border-primary glow-primary max-w-4xl mx-auto"
+              className="glass p-8 sm:p-12 md:p-16 rounded-3xl border border-primary glow-primary max-w-3xl mx-auto"
             >
-              <h2 className="text-5xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Ready to Transform Your Vision?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6">
                 Let's create something extraordinary together
               </p>
-              <div className="inline-flex items-center text-primary font-medium">
+              <div className="inline-flex items-center text-sm sm:text-base text-primary font-medium break-words">
                 <Phone className="mr-2 w-4 h-4" />
-                Reach us on WhatsApp: +91 95296 17985
+                <span>Reach us on WhatsApp: +91 95296 17985</span>
               </div>
             </motion.div>
           </div>

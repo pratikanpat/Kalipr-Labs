@@ -32,6 +32,7 @@ const Footer = ({ variant = "default" }: FooterProps) => {
             <h3 className="text-2xl font-bold mb-4 bg-gradient-glow bg-clip-text text-transparent">
               Calipr Labs
             </h3>
+              <p className="text-xs text-muted-foreground mt-1">- by Pratik Anpat</p>
             <p className="text-muted-foreground">
               Building the Future of Digital Experiences
             </p>
