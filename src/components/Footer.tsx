@@ -30,9 +30,9 @@ const Footer = ({ variant = "default" }: FooterProps) => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-glow bg-clip-text text-transparent">
-              Calipr Labs
+              Kalipr Labs
             </h3>
-              <p className="text-xs text-muted-foreground mt-1">- by Pratik Anpat</p>
+            <p className="text-xs text-muted-foreground mt-1">- by Pratik Anpat</p>
             <p className="text-muted-foreground">
               Building the Future of Digital Experiences
             </p>
@@ -69,8 +69,8 @@ const Footer = ({ variant = "default" }: FooterProps) => {
         </div>
 
         <div className="border-t border-border/50 pt-8 text-center text-muted-foreground text-sm">
-          <p className="flex items-center justify-center gap-2">
-            © 2024 Built by Calipr Labs with <Heart className="w-4 h-4 text-primary fill-primary" />
+            <p className="flex items-center justify-center gap-2">
+            © 2024 Built by Kalipr Labs with <Heart className="w-4 h-4 text-primary fill-primary" />
           </p>
         </div>
       </div>

@@ -21,15 +21,9 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <motion.div
-              whileHover={{ rotate: 180, scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-              className="glow-primary"
-            >
-              <Sparkles className="w-6 h-6 text-primary" />
-            </motion.div>
+            {/* Logo removed as requested; show name only */}
             <span className="text-xl font-bold bg-gradient-glow bg-clip-text text-transparent">
-              Calipr Labs
+              Kalipr Labs
             </span>
           </Link>
 
