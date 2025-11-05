@@ -22,7 +22,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             {/* Logo removed as requested; show name only */}
-            <span className="text-xl font-bold bg-gradient-glow bg-clip-text text-transparent">
+            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-glow bg-clip-text text-transparent">
               Kalipr Labs
             </span>
           </Link>
