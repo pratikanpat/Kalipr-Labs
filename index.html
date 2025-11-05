@@ -15,8 +15,13 @@
   <!-- Disable twitter/og preview images to prevent logos from appearing when the URL is shared -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaliprlabs" />
-  <!-- Site favicon (user-provided circular SVG) -->
+  <!-- Site favicons: SVG primary + PNG fallbacks for browsers that render small tabs better -->
   <link rel="icon" href="/images/fevicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fevicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/fevicon-64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/images/fevicon-128.png">
+  <link rel="shortcut icon" href="/images/fevicon-64.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="/images/fevicon-128.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

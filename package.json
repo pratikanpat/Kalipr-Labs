@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
   "images:resize": "node ./scripts/resize-images.cjs",
+  "generate:favicons": "node ./scripts/generate-favicons.cjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
